@@ -18,6 +18,7 @@ Open `index.html` directly in your browser.
 - Theme toggle with persistence (`localStorage`) and system preference fallback
 - Simple client-side router with placeholder activity routes
 - Expandable feature-based activity structure
+- Supabase leaderboard smoke-test page (`leaderboard-test.html`) for manual test score inserts and readback
 
 ## Future Directions
 

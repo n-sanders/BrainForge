@@ -24,6 +24,17 @@ function renderHome() {
         ${renderActivityCard('/spelling-sprint', 'Spelling Sprint', 'Boost spelling speed and accuracy!')}
       </div>
     </section>
+
+    <section class="activities-section" aria-labelledby="testing-tools-title">
+      <h2 id="testing-tools-title">Temporary Testing Tools</h2>
+      <div class="activity-grid">
+        <article class="activity-card">
+          <h3>Supabase Leaderboard Smoke Test</h3>
+          <p>Manually insert test scores and validate leaderboard queries.</p>
+          <a class="activity-card__link card-link" href="./leaderboard-test.html">Open Test Page →</a>
+        </article>
+      </div>
+    </section>
   `;
 }
 
