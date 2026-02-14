@@ -1,0 +1,109 @@
+.hero {
+  background: var(--hero-gradient);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: clamp(1.5rem, 1.2rem + 2vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 1.3rem + 2vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  max-width: 58ch;
+}
+
+.hero__cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-weight: 700;
+  padding: 0.75rem 1.15rem;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base), background-color var(--transition-base);
+}
+
+.hero__cta:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.activities-section {
+  margin-top: 2.5rem;
+}
+
+.activities-section h2 {
+  font-size: clamp(1.25rem, 1.05rem + 1vw, 1.75rem);
+  margin-bottom: 1rem;
+}
+
+.activity-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.activity-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.activity-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.activity-card p {
+  color: var(--text-secondary);
+  margin-bottom: 0.9rem;
+}
+
+.activity-card__link {
+  font-weight: 700;
+  color: var(--link-color);
+}
+
+.route-placeholder {
+  min-height: 45dvh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.route-placeholder__panel {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  max-width: 52ch;
+}
+
+.route-placeholder h2 {
+  margin-bottom: 0.7rem;
+}
+
+.route-placeholder p {
+  color: var(--text-secondary);
+}
+
+@media (min-width: 44rem) {
+  .activity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 68rem) {
+  .activity-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
