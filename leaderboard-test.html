@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrainForge | Supabase Leaderboard Test</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/theme-toggle.css" />
+    <link rel="stylesheet" href="./css/leaderboard-test.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="site-shell">
+      <header id="site-header" class="site-header" aria-label="Site header"></header>
+
+      <main id="main-content" tabindex="-1">
+        <section class="test-intro" aria-labelledby="test-title">
+          <h1 id="test-title">Supabase Leaderboard Smoke Test</h1>
+          <p>
+            Temporary manual test page for verifying Supabase connectivity and inserting leaderboard
+            records.
+          </p>
+          <div class="test-actions">
+            <button id="connect-test-btn" type="button">Run Connection Test</button>
+            <button id="refresh-leaderboard-btn" type="button">Refresh Leaderboard</button>
+          </div>
+          <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="test-grid" aria-label="Leaderboard test tools">
+          <article class="test-panel">
+            <h2>Insert Manual Test Score</h2>
+            <form id="score-form" class="score-form">
+              <label for="application">Application</label>
+              <input id="application" name="application" type="text" required maxlength="60" />
+
+              <label for="user-name">User Name</label>
+              <input id="user-name" name="user_name" type="text" required maxlength="50" />
+
+              <label for="score">Score</label>
+              <input id="score" name="score" type="number" required min="0" step="1" />
+
+              <button type="submit">Insert Test Score</button>
+            </form>
+          </article>
+
+          <article class="test-panel">
+            <h2>Top Score Per User</h2>
+            <p class="panel-help">Highest score for each user, sorted by score descending.</p>
+            <div id="leaderboard-container" class="leaderboard-container"></div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 BrainForge • Temporary Supabase leaderboard test page</p>
+      </footer>
+    </div>
+
+    <script type="module" src="./js/leaderboard-test.js"></script>
+  </body>
+</html>
